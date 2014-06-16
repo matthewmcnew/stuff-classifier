@@ -44,6 +44,7 @@ class TestBase < MiniTest::Unit::TestCase
   end
 
   def should_be(category, value)
-    assert_equal category, @classifier.classify(value), value
+    returned_value,returned_score = @classifier.classify(value)
+    assert_equal category, returned_value, value
   end
 end

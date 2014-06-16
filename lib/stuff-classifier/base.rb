@@ -159,10 +159,10 @@ class StuffClassifier::Base
     scores.each do |score|
       cat, prob = score
       next if cat == best
-      return default if prob * threshold > max_prob
+      return default, max_prob if prob * threshold > max_prob
     end
 
-    return best    
+    return best, max_prob
   end
 
   def save_state

@@ -52,5 +52,4 @@ class Test003NaiveBayesClassification < TestBase
     should_be :dog, "Who ate my meat?"
   end
 
-
 end
